@@ -1,0 +1,4 @@
+staticip=192.168.0.44/24
+gatewayip=192.168.0.1
+nameserversip=8.8.8.8,8.8.8.4
+eth_name=wlp8s0
