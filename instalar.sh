@@ -24,10 +24,10 @@ username="user1" #Definir nome do usuário que será adicionaro no passo 2
 
 ####1) Função para criar ip fixo e desabilitar DHCP ####
 
-staticip=`more cdir-config | grep staticip | awk -F= '{print $2}'`
-gatewayip=`more cdir-config | grep gatewayip | awk -F= '{print $2}'`
-nameserversip=`more cdir-config | grep nameserversip | awk -F= '{print $2}'`
-eth_name=`more cdir-config | grep eth_name | awk -F= '{print $2}'`
+staticip=`more network-config | grep staticip | awk -F= '{print $2}'`
+gatewayip=`more network-config | grep gatewayip | awk -F= '{print $2}'`
+nameserversip=`more network-config | grep nameserversip | awk -F= '{print $2}'`
+eth_name=`more network-config | grep eth_name | awk -F= '{print $2}'`
 
 echo
 cat > /etc/netplan/*.yaml <<EOF
