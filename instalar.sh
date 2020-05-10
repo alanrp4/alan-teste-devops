@@ -58,7 +58,7 @@ cat ./config/id_rsa.pub > /home/$username/.ssh/authorized_keys;
 chown $username:$username /home/$username/.ssh/ -R
 chmod 600 /home/$username/.ssh/* ; chmod 700 /home/$username/.ssh/
 
-#Adicionar usuário ao grupo root
+#Adicionar usuário criado ao grupo sudo
 gpasswd -a $username sudo
 
 #Desativar acesso ssh usuário root
@@ -67,7 +67,9 @@ systemctl restart sshd
 
 echo "===== Usuário criado e acesso ssh do usuário root desabilitado ====="
                     
-####3) #Instalar nginx latest ####
+####3) Deploy da aplicação de perguntas
+#Instalar nginx latest
+sudo add-apt-repository ppa:nginx/stable -y
 sudo apt update ; sudo apt install nginx -y
 
 #Instalar php v7.3
@@ -76,7 +78,7 @@ sudo add-apt-repository ppa:ondrej/php  -y
 apt update -y
 sudo apt install php7.3 php7.3-fpm -y
 
-#Ajustar configuração do nginx, para acsso a pagina de perguntas
+#Ajustar configuração do sites available do nginx, para acsso a pagina de perguntas
 cp ./config/default /etc/nginx/sites-available
 
 #Clonar do github aplicação de perguntas
@@ -93,6 +95,6 @@ sudo find /var/www/html/perguntas -type f -exec chmod 644 {} \;
 #Reiniciar servidor web
 sudo service nginx restart
 
-echo "=====  Deploy da pagina de pagina de teste realizado  ====="
+echo "=====  Deploy da pagina deteste finalizado  ====="
 echo "===== Fim ====="
 exit
