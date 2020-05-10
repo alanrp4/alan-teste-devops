@@ -1,7 +1,8 @@
 # Pré Requisitos #
 
-1. Configurar fixo desejado, gateway, dns e nome da placa ethernet  no arquivo network-config
-1. Configuarar nome do usuário na variavel username no instalar.sh (opcional)
+1. Configurar Ip Fixo desejado, gateway, dns  no arquivo network-config
+1. Configurar nome da placa ethernet no arquivo network-config
+1. Configuarar nome do usuário na variavel username no script instalar.sh (opcional)
 
 # Softwares e Versões instaladas # 
 
@@ -13,32 +14,28 @@
 1. Ajustar permissão arquivo instlar.sh
 
 ```
-#!bash
 chmod +x instalar.sh
 ```
 
 1. Executar arquivo instalar.sh
 
 ```
-#!bash
 bash instalar.sh
 ```
 
 ou
 
 ```
-#!bash
 ./intalar.sh
 ```
 
 1. Acessar remotamente servidor (utilizar chave.pem)
 
 ```
-#!bash
 ssh -i chave.pem user1@ip-do-servidor
 ```
 
-1. Acessar pagina de perguntas
+1. Acessar no browser pagina de perguntas
 
 ```
 localhost/perguntas
