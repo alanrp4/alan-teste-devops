@@ -6,7 +6,7 @@
 
 # Softwares e Versões instaladas # 
 
-- nginx stable verion (1.16.0)
+- nginx stable version (1.16.0)
 - php7.3 php7.3-fpm
 
 # Exemplo de uso #
@@ -26,7 +26,7 @@ bash instalar.sh
 ou
 
 ```
-./intalar.sh
+./instalar.sh
 ```
 
 3. Acesso remoto ao servidor via shh, necessário utilizar (chave.pem)
