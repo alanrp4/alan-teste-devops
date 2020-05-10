@@ -46,6 +46,8 @@ EOF
 
 sudo netplan apply
 
+echo "===== IP Fixo configurado  ====="
+
 ####2) Função para criar usuário ssh e desativar acesso do usuário root ####
 #Adicionr usuario
 useradd -m -p 123456 $username
@@ -62,6 +64,8 @@ gpasswd -a $username sudo
 #Desativar acesso ssh usuário root
 sed -i 's/PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
 systemctl restart sshd
+
+echo "===== Usuário criado e acesso ssh do usuário root desabilitado ====="
                     
 ####3) #Instalar nginx latest ####
 sudo apt update ; sudo apt install nginx -y
@@ -89,3 +93,6 @@ sudo find /var/www/html/perguntas -type f -exec chmod 644 {} \;
 #Reiniciar servidor web
 sudo service nginx restart
 
+echo "=====  Deploy da pagina de pagina de teste realizado  ====="
+echo "===== Fim ====="
+exit
