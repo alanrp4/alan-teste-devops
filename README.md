@@ -2,7 +2,7 @@
 
 1. Configurar Ip Fixo desejado, gateway e dns no arquivo network-config
 1. Configurar o nome da placa ethernet no arquivo network-config
-1. Configuarar nome do usuário que vai ser adicionado, na variavel username no script instalar.sh (opcional)
+1. Configurar nome do usuário que vai ser adicionado, na variavel username no script instalar.sh (opcional)
 
 # Softwares e Versões instaladas # 
 
